@@ -1,14 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import {createRoot} from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { DashboardRoutes } from './routes/DashboardRoutes';
+import dotenv from 'dotenv';
+dotenv.config();
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+createRoot(
   document.getElementById('root')
+).render(
+  <DashboardRoutes />
 );
 
 // If you want to start measuring performance in your app, pass a function
